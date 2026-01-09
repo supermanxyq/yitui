@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+     <title>肥城易推 - 官网</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- 自定义CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+   
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container border-nav">
+        <a class="navbar-brand ms-4" href="#">
+          <img src="images/logo.png" alt="百付科技"  style="max-width: 200px;max-height: 40px;"/>
+        </a>
+        <!-- 修改按钮，使用data-bs-toggle="offcanvas" -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 桌面端导航菜单 -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link px-4" href="index.html">首页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">商家获客</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 active" href="enterprise-ai.html"
+                >AI企业赋能</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">跨境电商</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">AI对话终端</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">线下培训</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 移动端侧边栏导航 -->
+        <div
+          class="offcanvas offcanvas-end bg-black"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">
+              导航菜单
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link px-4" href="index.html">首页</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">商家获客</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4 active" href="enterprise-ai.html"
+                  >AI企业赋能</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">跨境电商</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">AI对话终端</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">线下培训</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 轮播图/Banner -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div
+            class="carousel-background"
+            style="background-image: url('images/hero-bg.png')"
+          >
+            <div class="carousel-container">
+              <div class="carousel-content text-white">
+                <h1 class="display-4 fw-bold">AI赋能营销，引领数字化转型</h1>
+                <p class="lead mb-4">让每个企业都能轻松驾驭人工智能</p>
+                <a href="javascript:void(0)" onclick="openChat()" class="btn btn-primary btn-lg banner-btn"
+                  >立即咨询</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="carousel-background"
+            style="background-image: url('images/hero-bg.png')"
+          >
+            <div class="carousel-container">
+              <div class="carousel-content text-white">
+                <h1 class="display-4 fw-bold">智能商业解决方案</h1>
+                <p class="lead mb-4">提升业务效率，创造更多价值</p>
+                <a href="javascript:void(0)" onclick="openChat()" class="btn btn-primary btn-lg banner-btn"
+                  >立即咨询</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div
+            class="carousel-background"
+            style="background-image: url('images/hero-bg.png')"
+          >
+            <div class="carousel-container">
+              <div class="carousel-content text-white">
+                <h1 class="display-4 fw-bold">数据驱动决策</h1>
+                <p class="lead mb-4">洞察市场趋势，把握发展机遇</p>
+                <a href="javascript:void(0)" onclick="openChat()" class="btn btn-primary btn-lg banner-btn"
+                  >立即咨询</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span
+          class="carousel-control-prev-icon rounded-circle"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span
+          class="carousel-control-next-icon rounded-circle"
+          aria-hidden="true"
+        ></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- 核心优势板块 -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">核心业务能力</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5">
+          <!-- 第一行 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon1.png"
+                    alt="NFC获客系统"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">NFC获客系统</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon2.png"
+                    alt="团购外卖代运营"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">团购外卖代运营</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon3.png"
+                    alt="视频号+爆店码"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">视频号+爆店码</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon4.png"
+                    alt="短视频矩阵营销"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">短视频矩阵营销</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第二行 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon5.png"
+                    alt="AI赋能直播"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">AI赋能直播</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon6.png"
+                    alt="AI数字人短视频"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">AI数字人短视频</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon7.png"
+                    alt="AI智能客服"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">AI智能客服</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon8.png"
+                    alt="企业AI训练模型"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">企业AI训练模型</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- 第三行 -->
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon9.png"
+                    alt="AI智慧一体机"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">AI智慧一体机</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon10.png"
+                    alt="AI赋能海外电商"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">AI赋能海外电商</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 border-0 shadow-sm feature-card">
+              <div class="card-body py-4">
+                <div class="icon-blue mb-3">
+                  <img
+                    src="images/icon11.png"
+                    alt="获客指导与培训"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="card-title">获客指导与培训</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col d-md-none d-lg-block" style="visibility: hidden">
+            <!-- 占位元素，保持布局平衡 -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NFC获客系统详情 -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="mb-3">NFC获客系统</h2>
+            <h3 class="text-primary mb-4 section-subtitle">
+              一碰即连，让每个顾客都成为你的流量裂变点
+            </h3>
+
+            <h4 class="mb-3 section-title2">产品核心价值</h4>
+            <p class="mb-4 section-title3">"告别传统地推，用AI重构获客方式"</p>
+
+            <p class="mb-4 section-title4">
+              基于NFC近场通信+AI行为预测技术，为餐饮、零售、教培等本地商家打造：
+            </p>
+
+            <ul class="feature-list mb-5">
+              <li class="mb-3">
+                <i class="bi bi-check text-primary me-2"></i>
+                零成本获客：顾客手机轻碰即自动关注/领券
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-check text-primary me-2"></i>
+                裂变式传播：AI智能推荐分享奖励机制
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-check text-primary me-2"></i>
+                数据可追踪：实时统计各点位转化效果
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            
+            <div class="nfc-image-container">
+              <img
+                src="images/app-mockup.png"
+                alt="NFC系统演示"
+                class="img-fluid rounded"
+              />
+              <div class="head-container">
+                <img src="images/hand.gif" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 团购外卖代运营 -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="takeout-image-container">
+              <div class="icon-takeout top-right">
+                <i class="bi bi-check-circle-fill"></i>
+              </div>
+              <div class="icon-takeout bottom-left">
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <img
+                src="images/takeout-dashboard.png"
+                alt="团购外卖代运营平台"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="mb-3">团购外卖代运营</h2>
+            <h3 class="text-primary mb-4 section-subtitle">
+              锁定同城流量C位，让每一单外卖都带来新客
+            </h3>
+
+            <h4 class="mb-3 section-title2">核心价值</h4>
+            <p class="mb-4 section-title3">"把爆款流量直接转化为门店订单"</p>
+
+            <ul class="feature-list mb-5">
+              <li class="mb-3">
+                <i class="bi bi-check text-primary me-2"></i>
+                流量裂变：内容创作+短视频挂载+直播套餐组合拳
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-check text-primary me-2"></i>
+                智能配送：自动同步订单至美团/饿鸟/达达系统
+              </li>
+              <li class="mb-3">
+                <i class="bi bi-check text-primary me-2"></i>
+                数据闭环：从短视频观看→下单→复购全链路追踪
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 视频号+爆店码 -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="mb-3">视频号+爆店码</h2>
+            <h3 class="text-primary mb-4 section-subtitle">
+              激活微信10亿流量，打造商家专属的「线上门店」
+            </h3>
+
+            <h4 class="mb-3 section-title3">传统获客痛点</h4>
+            <ul class="problem-list mb-4 red-color">
+              <li>
+                <span class="problem-icon"><i class="bi bi-x-circle"></i></span>
+                发传单没人看
+              </li>
+              <li>
+                <span class="problem-icon"><i class="bi bi-x-circle"></i></span>
+                线上广告太烧钱
+              </li>
+              <li>
+                <span class="problem-icon"><i class="bi bi-x-circle"></i></span>
+                顾客来了就走
+              </li>
+              <li>
+                <span class="problem-icon"><i class="bi bi-x-circle"></i></span>
+                复购率越来越低
+              </li>
+            </ul>
+
+            <h4 class="mb-3 section-title3">我们的优势</h4>
+            <ul class="advantage-list mb-5">
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                双核驱动：让流量精准引爆门店生意！
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                流量精准：优先推送给同城用户
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                转化高效：一键跳转企业微信/小程序下单
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                闭环完整：从内容→预约→支付→评价全链路打通
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="video-funnel-container">
+              <img
+                src="images/video-funnel.png"
+                alt="视频号+爆店码营销漏斗"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 短视频矩阵营销 -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-lg-12 mb-5">
+                <div class="media-platform-container">
+                  <img
+                    src="images/media-platforms.png"
+                    alt="全媒体营销矩阵"
+                    class="img-fluid rounded"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 f-c-c pl-70">
+            <h2 class="mb-3">短视频矩阵营销</h2>
+            <h3 class="text-primary mb-4 section-subtitle">
+              快速量产爆款视频，让同城流量主动找上门！
+            </h3>
+
+            <h4 class="mb-3 section-title3">传统短视频营销的痛点</h4>
+            <ul class="problem-list mb-4 section-title3">
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                偶尔发1条，根本没人看
+              </li>
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                不懂算法，播放量卡在500
+              </li>
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                自己不会拍，外包成本太高
+              </li>
+            </ul>
+
+            <h4 class="mb-3 section-title3">我们的解决方案</h4>
+            <ul class="advantage-list mb-5">
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                AI批量生产：自动生成原创视频
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                全平台分发：抖音、快手、视频号同步宣炸
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                精准获客：锁定同城3公里精准人群
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI赋能直播 -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-3 text-center">AI赋能直播</h2>
+
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <h4 class="mb-3 section-title3-bold">传统直播的4大难题</h4>
+            <ul class="problem-list mb-4">
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                没人看：开播半小时，在线个位数
+              </li>
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                不会说：话术生硬，留不住观众
+              </li>
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                成本高：请主播、搭场景、投入大大
+              </li>
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                没转化：观众看完就走，不下单
+              </li>
+            </ul>
+
+            <h4 class="mb-3 section-title3-bold">我们的AI直播解决方案</h4>
+            <ul class="advantage-list mb-5">
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                无人值守：AI虚拟主播7×24小时在线
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                智能互动：实时回答顾客问题，逼真如真人
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                精准促单：AI分析观众行为，自动推送优惠
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                成本直降：节省人员成本
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-8">
+            <div class="full-image-container">
+              <img
+                src="images/ai-live-full.png"
+                alt="AI赋能直播系统"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI数字人短视频 -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">AI数字人短视频</h2>
+        <div class="row align-items-center">
+          <div class="col-lg-4">
+            <h4 class="mb-3 section-title3-bold">传统短视频制作的痛点</h4>
+            <ul class="problem-list mb-4">
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                人力成本高：拍摄+剪辑+演员费用昂贵
+              </li>
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                产能有限：团队一天最多产出3-5条
+              </li>
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                表现不稳定：真人状态影响视频质量
+              </li>
+              <li>
+                <span class="problem-icon"
+                  ><i class="bi bi-x-circle-fill"></i
+                ></span>
+                无法持续：节假日、夜间无法拍摄
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <div class="digital-human-container">
+              <img
+                src="images/digital-human.png"
+                alt="AI数字人形象"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <h4 class="mb-3 section-title3-bold">我们的AI数字人解决方案</h4>
+            <ul class="advantage-list mb-4">
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                形象定制：克隆老板/专家/网红形象
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                批量生产：1小时生成100条原创视频
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                永不疲倦：24小时自动工作
+              </li>
+              <li>
+                <span class="advantage-icon"
+                  ><i class="bi bi-check-circle-fill"></i
+                ></span>
+                成本直降：比传统拍摄节省90%费用
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI智能客服 -->
+    <section class="py-5 ai-customer-service-section">
+      <div class="container position-relative">
+        <!-- 左上角愤怒客户图像 -->
+        <div class="customer-image-container">
+          <img
+            src="images/angry-customer.png"
+            alt="愤怒的客户"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+        
+        <!-- 右上角AI客服图像 -->
+        <div class="service-image-container">
+          <img
+            src="images/ai-customer-service.png"
+            alt="AI客服形象"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+        
+        <!-- 中央标题区域 -->
+        <div class="center-title-area text-center">
+          <h2 class="mb-3">AI智能客服</h2>
+          <p class="mb-4">7×24小时自动应答，接待效率提升500%，客户满意度飙升！</p>
+        </div>
+        
+        <!-- 底部内容区域 -->
+        <div class="content-comparison-area">
+          <div class="row">
+            <!-- 左侧传统客服痛点 -->
+            <div class="col-lg-6">
+              <div class="problem-card">
+                <h4 class="mb-3 section-title5">
+                  <span class="problem-icon"><i class="bi bi-x-circle-fill"></i></span>传统客服的五大痛点</h4>
+                <ul class="problem-list">
+                  <li>
+                    <span class="problem-icon"><i class="bi bi-x-circle-fill"></i></span>
+                    人力成本高：工资+培训+管理投入巨大
+                  </li>
+                  <li>
+                    <span class="problem-icon"><i class="bi bi-x-circle-fill"></i></span>
+                    响应速度慢：高峰期客户排队流失
+                  </li>
+                  <li>
+                    <span class="problem-icon"><i class="bi bi-x-circle-fill"></i></span>
+                    服务质量不稳定：新人经验不足，老员工易疲劳
+                  </li>
+                  <li>
+                    <span class="problem-icon"><i class="bi bi-x-circle-fill"></i></span>
+                    无法全时服务：夜间/节假日无人值守
+                  </li>
+                  <li>
+                    <span class="problem-icon"><i class="bi bi-x-circle-fill"></i></span>
+                    数据难沉淀：客户需求无法系统分析
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- 右侧AI解决方案 -->
+            <div class="col-lg-6">
+              <div class="problem-card problem-card2">
+                <h4 class="mb-3 section-title5"><i class="bi bi-lightbulb-fill text-primary me-2"></i>我们的AI客服解决方案</h4>
+                <ul class="advantage-list">
+                  <li>
+                    <span class="advantage-icon"><i class="bi bi-check-circle-fill"></i></span>
+                    秒级响应：同时接待1000+咨询0等待
+                  </li>
+                  <li>
+                    <span class="advantage-icon"><i class="bi bi-check-circle-fill"></i></span>
+                    深度学习：基于AI训练模型，越用越聪明
+                  </li>
+                  <li>
+                    <span class="advantage-icon"><i class="bi bi-check-circle-fill"></i></span>
+                    无缝切换：复杂问题自动转人工
+                  </li>
+                  <li>
+                    <span class="advantage-icon"><i class="bi bi-check-circle-fill"></i></span>
+                    成本直降：节省80%客服人力成本
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 企业AI训练模型 -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="mb-3 text-center relative"><span class="ai-model-image">
+          <img
+            src="images/ai-model.png"
+            alt="企业AI训练模型"
+            class="img-fluid"
+          /></span>企业AI训练模型</h2>
+       
+         
+          <p class="mb-4 section-title text-center">
+            安全可控的自营中心，赋能企业数字化转型
+          </p>
+
+          <div class="row mt-5">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 border-0 shadow-sm feature-card">
+                <div class="card-body text-center py-4">
+                  <div class="icon-blue mb-3 mx-auto">
+                    <img
+                      src="images/icon-shield.png"
+                      alt="数据不出厂区"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <h5 class="card-title">数据不出厂区</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 border-0 shadow-sm feature-card">
+                <div class="card-body text-center py-4">
+                  <div class="icon-blue mb-3 mx-auto">
+                    <img
+                      src="images/icon-database.png"
+                      alt="知识持续进化"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <h5 class="card-title">知识持续进化</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 border-0 shadow-sm feature-card">
+                <div class="card-body text-center py-4">
+                  <div class="icon-blue mb-3 mx-auto">
+                    <img
+                      src="images/icon-chart.png"
+                      alt="决策精准高效"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <h5 class="card-title">决策精准高效</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="industry-solutions mt-4">
+            <div class="industry-card mb-3">
+             <div class="flex">
+              <div class="industry-icon">
+               <img src="images/in-icon1.png" alt="">
+              </div>
+              <div class="industry-content">
+                <h5>工业制造场景</h5>
+                <p>智能生产系统</p>
+               
+              </div>
+             </div>
+
+              <div class="industry-examples">
+                <span>设备预测性维护（准确率≥93%）</span>
+                <span>工艺参数优化（良品率提升18-35%）</span>
+                <span>质量缺陷检测（识别精度99.5%）</span>
+              </div>
+            </div>
+
+            <div class="industry-card mb-3">
+              <div class="flex">
+                <div class="industry-icon">
+                  <img src="images/in-icon2.png" alt="">
+
+                </div>
+                <div class="industry-content">
+                  <h5>零售消费场景</h5>
+                  <p>商业决策引擎</p>
+                  
+                </div>
+              </div>
+              <div class="industry-examples">
+                <span>消费者画像分析（线下+线上数据融合）</span>
+                <span>动态定价策略（竞品实时监控）</span>
+                <span>智能选品推荐（销售预测准确率85%+）</span>
+              </div>
+            </div>
+
+            <div class="industry-card mb-3">
+             <div class="flex">
+              <div class="industry-icon">
+                <img src="images/in-icon3.png" alt="">
+              </div>
+              <div class="industry-content">
+                <h5>金融服务场景</h5>
+                <p>智能风控体系</p>
+              
+              </div>
+             </div>
+              <div class="industry-examples">
+                <span>企业信用评估（整合多维数据）</span>
+                <span>反欺诈监测（实时交易预警）</span>
+                <span>智能投顾（资产组合优化）</span>
+              </div>
+            </div>
+
+            <div class="industry-card mb-3">
+              <div class="flex">
+              <div class="industry-icon">
+                <img src="images/in-icon4.png" alt="">
+              </div>
+              <div class="industry-content">
+                <h5>医疗健康场景</h5>
+                <p>智慧医疗方案</p>
+                
+              </div>
+              </div>
+              <div class="industry-examples">
+                <span>医学影像分析（支持CT/DR等12种模态）</span>
+                <span>临床决策支持（本地病例库训练）</span>
+                <span>慢病管理模型（糖尿病等重点病种）</span>
+              </div>
+            </div>
+
+            <div class="industry-card mb-3">
+              <div class="flex">
+              <div class="industry-icon">
+                <img src="images/in-icon5.png" alt="">
+              </div>
+              <div class="industry-content">
+                <h5>教育培训场景</h5>
+                <p>智能教学系统</p>
+                
+              </div>
+              </div>
+              <div class="industry-examples">
+                <span>学情画像：实时追踪100+学习维度</span>
+                <span>个性化作业：动态生成层级习题</span>
+                <span>课堂质量评估：AI分析师生互动质量</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI智慧一体机 -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center mb-4">
+            <h2 class="mb-3">AI智慧一体机</h2>
+            <p class="mb-4 section-title5">
+              集成交互、计算、应用于一体的智能终端，赋能全场景数字化转型
+            </p>
+          </div>
+        </div>
+
+        <div class="solution-card ai-device-box mb-4 row">
+          <div class="col-lg-7">
+            <div class="product-position">
+              
+              <div class="device-content">
+               <div class="flex">
+                <div class="solution-icon">
+                  <img src="images/device-icon1.png" alt="">
+                </div>
+               <div>
+                <h5 class="section-title2">产品定位</h5>
+                <p class="section-title3">新一代智能交互终端</p>
+               </div>
+               </div>
+                <div class="device-features">
+                  <div class="feature-item text-center">多模态交互</div>
+                  <div class="feature-item text-center">边缘计算</div>
+                  <div class="feature-item text-center">行业场景深度适配</div>
+                </div>
+                <div class="device-applications">
+                  <p class="section-title4">
+                    覆盖政务、教育、医疗、零售、金融、制造六大核心领域
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="ai-device-images">
+              <div class="flex">
+                <img
+                  src="images/ai-device1.png"
+                  alt="AI智慧一体机应用1"
+                  class="img-fluid rounded shadow-sm"
+                />
+                <img
+                  src="images/ai-device2.png"
+                  alt="AI智慧一体机应用2"
+                  class="img-fluid rounded shadow-sm"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-solutions">
+          <div class="row mb-4">
+            <div class="col-lg-6 ">
+              <div class="solution-card government">
+                
+                <div class="solution-content">
+                 <div class="flex">
+                  <div class="solution-icon">
+                    <img src="images/device-icon2.png" alt="">
+                  </div>
+                 <div>
+                  <h5 class="section-title2">政务场景应用</h5>
+                  <p class="section-title3">智慧政务终端</p>
+                 </div>
+                 </div>
+                  <div class="solution-features">
+                    <div class="feature-tag">
+                      <i class="bi bi-check"></i>
+                      自助业务办理（200+政务服务覆盖）
+                    </div>
+                    <div class="feature-tag">
+                      <i class="bi bi-check"></i>
+                      智能咨询导办（方言语音交互）
+                    </div>
+                    <div class="feature-tag">
+                      <i class="bi bi-check"></i>
+                      远程视频核验（活体检测+OCR识别）
+                    </div>
+                  </div>
+                </div>
+                <div class="solution-image">
+                  <img
+                    src="images/ai-gov.png"
+                    alt="政务场景应用"
+                    class="img-fluid rounded"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 ">
+              <div class="solution-card education">
+               
+                <div class="solution-content">
+                 <div class="flex">
+                  <div class="solution-icon">
+                    <img src="images/device-icon3.png" alt="">
+                  </div>
+                 <div>
+                  <h5 class="section-title2">教育场景应用</h5>
+                  <p class="section-title3">智慧校园终端</p>
+                 </div>
+                 </div>
+                 <div class="solution-features">
+                  <div class="feature-tag">
+                    <i class="bi bi-check"></i>
+                    无感考勤系统（人脸识别+行为分析）
+                  </div>
+                  <div class="feature-tag">
+                    <i class="bi bi-check"></i>
+                    自助资料终端（学科知识图谱支持）
+                  </div>
+                  <div class="feature-tag">
+                    <i class="bi bi-check"></i>
+                    电子班牌2.0（个性化信息推送）
+                  </div>
+                </div>
+                </div>
+                <div class="solution-image">
+                  <img
+                    src="images/ai-edu.png"
+                    alt="教育场景应用"
+                    class="img-fluid rounded"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 ">
+              <div class="solution-card medical">
+                
+                <div class="solution-content">
+                 <div class="flex">
+                  <div class="solution-icon">
+                    <img src="images/device-icon4.png" alt="">
+                  </div>
+                 <div>
+                  <h5 class="section-title2">医疗场景应用</h5>
+                  <p class="section-title3">智能医疗终端</p>
+                 </div>
+                 </div>
+                  <div class="solution-features">
+                    <div class="feature-tag">
+                      <i class="bi bi-check"></i>
+                      自助挂号缴费（支持医保实时结算）
+                    </div>
+                    <div class="feature-tag">
+                      <i class="bi bi-check"></i>
+                      智能分诊导医（症状语义理解）
+                    </div>
+                    <div class="feature-tag">
+                      <i class="bi bi-check"></i>
+                      健康自查系统（AI问诊初步筛查）
+                    </div>
+                  </div>
+                </div>
+                <div class="solution-image">
+                  <img
+                    src="images/ai-medical.png"
+                    alt="医疗场景应用"
+                    class="img-fluid rounded"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 ">
+              <div class="solution-card retail">
+                <div class="solution-content">
+                  <div class="flex">
+                    <div class="solution-icon">
+                      <img src="images/device-icon5.png" alt="">
+                    </div>
+                   <div>
+                    <h5 class="section-title2">零售场景应用</h5>
+                    <p class="section-title3">智能商业终端</p>
+                   </div>
+                  </div>
+                  <div class="solution-features">
+                    <div class="feature-tag">
+                      <i class="bi bi-check"></i>
+                      自助结算系统（商品识别准确率99.5%）
+                    </div>
+                    <div class="feature-tag">
+                      <i class="bi bi-check"></i>
+                      智能货架（顾客行为分析+动态定价）
+                    </div>
+                    <div class="feature-tag">
+                      <i class="bi bi-check"></i>
+                      虚拟导购员（个性化商品推荐）
+                    </div>
+                  </div>
+                </div>
+                <div class="solution-image">
+                  <img
+                    src="images/ai-retail.png"
+                    alt="零售场景应用"
+                    class="img-fluid rounded"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI赋能跨境电商 -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-3">AI赋能跨境电商</h2>
+        <p class="text-center mb-5 section-title5">
+          用智能技术突破跨境壁垒，打造全球化爆款
+        </p>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="ecommerce-pain-points">
+              <h4 class="mb-4 section-title3-bold">海外电商核心痛点</h4>
+              <ul class="ecommerce-problem-list">
+                <li>
+                  <span class="problem-icon">
+                    <i class="bi bi-x-circle-fill"></i>
+                  </span>
+                  <div class="problem-content">语言文化障碍导致转化率低下</div>
+                </li>
+                <li>
+                  <span class="problem-icon">
+                    <i class="bi bi-x-circle-fill"></i>
+                  </span>
+                  <div class="problem-content">广告投放ROI难以把控</div>
+                </li>
+                <li>
+                  <span class="problem-icon">
+                    <i class="bi bi-x-circle-fill"></i>
+                  </span>
+                  <div class="problem-content">客服响应效率不足影响体验</div>
+                </li>
+                <li>
+                  <span class="problem-icon">
+                    <i class="bi bi-x-circle-fill"></i>
+                  </span>
+                  <div class="problem-content">选品决策缺乏数据支撑</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ecommerce-solutions">
+              <h4 class="mb-4 section-title3-bold">我们的AI解决方案</h4>
+              <ul class="ecommerce-solution-list">
+                <li class="blue-color">
+                  <div class="solution-badge">
+                    <img src="images/ai-badge.png" alt="AI徽章" />
+                  </div>
+                  <div class="solution-content">智能多语言本地化系统</div>
+                </li>
+                <li class="blue-color">
+                  <div class="solution-badge">
+                   <img src="images/ai-badge-2.png" alt="">
+                  </div>
+                  <div class="solution-content">跨境广告智能优化引擎</div>
+                </li>
+                <li class="blue-color">
+                  <div class="solution-badge">
+                    <img src="images/ai-badge-3.png" alt="">
+                  </div>
+                  <div class="solution-content">24/7全球智能客服</div>
+                </li>
+                <li class="blue-color">
+                  <div class="solution-badge">
+                    <img src="images/ai-badge-4.png" alt="">
+                  </div>
+                  <div class="solution-content">大数据选品决策支持</div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 获客指导与培训 -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-3">获客指导与培训</h2>
+        <p class="text-center mb-4 section-title4">
+          手把手教你玩转抖音/美团/微信，实现订单增长
+        </p>
+
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-4 mb-4">
+            <div class="training-method-card">
+              <div class="method-icon">
+                <img src="images/training-method-1.png" alt="">
+              </div>
+              <h5 class="section-title2">系统方法</h5>
+              <p class="section-title3">从0-1搭建线上获客体系</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="training-method-card">
+              <div class="method-icon">
+                <img src="images/training-method-2.png" alt="">
+              </div>
+              <h5 class="section-title2">实战技巧</h5>
+              <p class="section-title3">教你可复制的爆单公式</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="training-method-card">
+              <div class="method-icon">
+                <img src="images/training-method-3.png" alt="">
+              </div>
+              <h5 class="section-title2">持续陪跑</h5>
+              <p class="section-title3">跟踪指导，确保落地</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="training-module-card">
+              <div class="module-header">
+                <h5 class="section-title2">模块1:平台规则与账号搭建</h5>
+              </div>
+              <ul class="training-list">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  抖音/美团/微信流量算法解密
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  高转化店铺装修技巧（主图/视频/文案）
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  避免违规的"红线"预警
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="training-module-card">
+              <div class="module-header">
+                <h5 class="section-title2">模块3:精准流量获取</h5>
+              </div>
+              <ul class="training-list">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  提高投流回报效果的技术
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  美团店铺排名冲进前3的秘籍
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  微信社群裂变：老客带新客
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="training-module-card">
+              <div class="module-header">
+                <h5 class="section-title2">模块2:爆款内容生产</h5>
+              </div>
+              <ul class="training-list">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  手机拍摄高质感短视频（现场实操）
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  3种必火文案模板
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  低成本打造"好品/服务"的方法
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <div class="training-module-card">
+              <div class="module-header">
+                <h5 class="section-title2">模块4:顾客留存与复购</h5>
+              </div>
+              <ul class="training-list">
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  私域流量转化
+                </li>
+                <li>
+                  <i class="bi bi-check-circle-fill text-success"></i>
+                  唤醒沉睡顾客
+                </li>
+               
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 为什么选择我们 -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">为什么选择我们</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-4 mb-4">
+            <div class="choose-us-card">
+              <div class="choose-icon">
+               <img src="images/choose-us-1.png" alt="">
+              </div>
+              <h4 class="mb-3 mt-4 section-title2">高效获客</h4>
+              <p class="section-title3">基于AI技术的精准营销，让获客更轻松</p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="choose-us-card">
+              <div class="choose-icon">
+               <img src="images/choose-us-2.png" alt="">
+              </div>
+              <h4 class="mb-3 mt-4 section-title2">智能赋能</h4>
+              <p class="section-title3">
+                全方位数字化解决方案，助力企业轻型升级
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="choose-us-card">
+              <div class="choose-icon">
+               <img src="images/choose-us-3.png" alt="">
+              </div>
+              <h4 class="mb-3 mt-4 section-title2">成本优化</h4>
+              <p class="section-title3">显著降低获客成本，提升营销ROI</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h4 class="text-primary mb-4">
+              肥城易推网络服务中心
+            </h4>
+            <p class="mb-2">
+              地址：肥城市工业三路陶都农贸城L1号沿街楼南首
+            </p>
+            <p class="mb-2">电话：010-00000000</p>
+            <p class="mb-2">邮箱：support@modao.cc</p>
+          </div>
+
+          <div class="col-lg-2 mb-4 mb-lg-0">
+            <h5 class="text-white mb-3">关于我们</h5>
+            <ul class="footer-links">
+              <li><a href="#">业务介绍</a></li>
+              <li><a href="#">客户案例</a></li>
+              <li><a href="#">问答客服</a></li>
+              <li><a href="#">业务介绍</a></li>
+              <li><a href="#">问答客服</a></li>
+              <li><a href="#">公共关系</a></li>
+              <li><a href="#">其他相关</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 mb-4 mb-lg-0">
+            <h5 class="text-white mb-3">产品与服务</h5>
+            <ul class="footer-links">
+              <li><a href="#">训练AI模型</a></li>
+              <li><a href="#">AI应用开发</a></li>
+              <li><a href="#">AI Agent</a></li>
+              <li><a href="#">训练AI模型</a></li>
+              <li><a href="#">对接AI大模型</a></li>
+              <li><a href="#">AI Agent</a></li>
+              <li><a href="#">训练AI模型</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2">
+            <h5 class="text-white mb-3">联系我们</h5>
+            <div class="social-icons mb-4">
+              <a href="#" class="me-2"><img src="./images/lx-icon1.png" alt=""></a>
+              <a href="#" class="me-2"><img src="./images/lx-icon2.png" alt=""></a>
+              <a href="#"><img src="./images/lx-icon3.png" alt=""></a>
+            </div>
+            <div class="qr-code">
+              <img
+                src="images/wx.png"
+                alt="微信二维码"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+  
+    <script
+    src="https://baifuqianwen.com/js/iframe.js"
+    id="chatbot-iframe"
+    data-bot-src="https://baifuqianwen.com/chat/share?shareId=pryiqn30ln6pyu0a6mi39tr6"
+    data-default-open="false"
+    data-drag="true"
+    data-open-icon="data:image/svg+xml;base64,PHN2ZyB0PSIxNjkwNTMyNzg1NjY0IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQxMzIiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNTEyIDMyQzI0Ny4wNCAzMiAzMiAyMjQgMzIgNDY0QTQxMC4yNCA0MTAuMjQgMCAwIDAgMTcyLjQ4IDc2OEwxNjAgOTY1LjEyYTI1LjI4IDI1LjI4IDAgMCAwIDM5LjA0IDIyLjRsMTY4LTExMkE1MjguNjQgNTI4LjY0IDAgMCAwIDUxMiA4OTZjMjY0Ljk2IDAgNDgwLTE5MiA0ODAtNDMyUzc3Ni45NiAzMiA1MTIgMzJ6IG0yNDQuOCA0MTZsLTM2MS42IDMwMS43NmExMi40OCAxMi40OCAwIDAgMS0xOS44NC0xMi40OGw1OS4yLTIzMy45MmgtMTYwYTEyLjQ4IDEyLjQ4IDAgMCAxLTcuMzYtMjMuMzZsMzYxLjYtMzAxLjc2YTEyLjQ4IDEyLjQ4IDAgMCAxIDE5Ljg0IDEyLjQ4bC01OS4yIDIzMy45MmgxNjBhMTIuNDggMTIuNDggMCAwIDEgOCAyMi4wOHoiIGZpbGw9IiM0ZTgzZmQiIHAtaWQ9IjQxMzMiPjwvcGF0aD48L3N2Zz4="
+    data-close-icon="data:image/svg+xml;base64,PHN2ZyB0PSIxNjkwNTM1NDQxNTI2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjYzNjciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNTEyIDEwMjRBNTEyIDUxMiAwIDEgMSA1MTIgMGE1MTIgNTEyIDAgMCAxIDAgMTAyNHpNMzA1Ljk1NjU3MSAzNzAuMzk1NDI5TDQ0Ny40ODggNTEyIDMwNS45NTY1NzEgNjUzLjYwNDU3MWE0NS41NjggNDUuNTY4IDAgMSAwIDY0LjQzODg1OCA2NC40Mzg4NThMNTEyIDU3Ni41MTJsMTQxLjYwNDU3MSAxNDEuNTMxNDI5YTQ1LjU2OCA0NS41NjggMCAwIDAgNjQuNDM4ODU4LTY0LjQzODg1OEw1NzYuNTEyIDUxMmwxNDEuNTMxNDI5LTE0MS42MDQ1NzFhNDUuNTY4IDQ1LjU2OCAwIDEgMC02NC40Mzg4NTgtNjQuNDM4ODU4TDUxMiA0NDcuNDg4IDM3MC4zOTU0MjkgMzA1Ljk1NjU3MWE0NS41NjggNDUuNTY4IDAgMCAwLTY0LjQzODg1OCA2NC40Mzg4NTh6IiBmaWxsPSIjNGU4M2ZkIiBwLWlkPSI2MzY4Ij48L3BhdGg+PC9zdmc+"
+  ></script>
+   <script>
+    function waitForElement(selector) {
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                observer.disconnect();
+                resolve(document.querySelector(selector));
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    });
+}
+
+// 使用方式
+function openChat() {
+    waitForElement('#fastgpt-chatbot-button').then(button => {
+        button.click();
+    });
+}
+    // function openChat() {
+    //   document.querySelector('#fastgpt-chatbot-button').click();
+    // }
+    </script>
+  
+  </body>
+</html>
