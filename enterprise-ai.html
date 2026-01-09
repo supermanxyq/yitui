@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>企业AI赋能 - 百付人工智能科技</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- 自定义CSS -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- 导航栏 - 与主页相同 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container border-nav">
+        <a class="navbar-brand ms-4" href="#">
+          <img
+            src="images/logo.png"
+            alt="百付科技"
+            style="max-width: 200px; max-height: 40px"
+          />
+        </a>
+        <!-- 修改按钮，使用data-bs-toggle="offcanvas" -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- 桌面端导航菜单 -->
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link px-4" href="index.html">首页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">商家获客</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4 active" href="enterprise-ai.html"
+                >AI企业赋能</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">跨境电商</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">AI对话终端</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-4" href="#">线下培训</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 移动端侧边栏导航 -->
+        <div
+          class="offcanvas offcanvas-end bg-black"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">
+              导航菜单
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link px-4" href="index.html">首页</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">商家获客</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4 active" href="enterprise-ai.html"
+                  >AI企业赋能</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">跨境电商</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">AI对话终端</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link px-4" href="#">线下培训</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- AI企业赋能页面 Banner -->
+    <div
+      class="ai-enterprise-banner py-5"
+      style="background-image: url('images/ai-enterprise-bg.png')"
+    >
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="display-4 text-white mb-4 fw-bold">企业AI赋能</h1>
+            <p class="lead text-white mb-4">
+              打造企业专属AI能力，实现业务流程智能化升级
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 搜索框 -->
+    <section class="py-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="search-box d-flex align-items-center">
+              <button class="btn btn-primary btn-search">
+                <i class="bi bi-grid me-1"></i> 全部
+              </button>
+              <button class="btn btn-outline-secondary btn-search">
+                <i class="bi bi-graph-up me-1"></i> AI营销系统
+              </button>
+              <button class="btn btn-outline-secondary btn-search">
+                <i class="bi bi-clipboard-data me-1"></i> AI数据分析
+              </button>
+              <button class="btn btn-outline-secondary btn-search">
+                <i class="bi bi-chat-square-text me-1"></i> 智能对话机器人
+              </button>
+              <button class="btn btn-outline-secondary btn-search">
+                <i class="bi bi-tools me-1"></i> 数字营销工具
+              </button>
+              <button class="btn btn-outline-secondary btn-search">
+                <i class="bi bi-file-earmark-text me-1"></i> AI内容生成
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="border"></div>
+      <div class="container">
+        <div class="search-input">
+          <input type="text" class="form-control" placeholder="搜索产品服务" />
+          <i class="bi bi-search search-icon"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI产品列表 -->
+    <section class="py-1">
+      <div class="container">
+        <div class="row">
+          <!-- AI无人直播 -->
+          <div class="col-lg-12 mb-4">
+            <div class="ai-product-card p-3">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <div class="product-image">
+                    <img
+                      src="images/ai1.png"
+                      alt="AI无人直播"
+                      class="img-fluid rounded"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-content">
+                    <div class="product-badge mb-2">
+                      <img src="images/ai-icon1.png" alt="" />
+                      <span>AI无人直播</span>
+                    </div>
+                    <p class="product-desc">
+                      智狐AI让商家直播更简单。每个商家都可以通过智狐AI无人直播系统，实现自动直播！只需录入直播话术，找到合适的场景，一部手机即可开播。支持商户自用、代理、OEM贴牌、私有化部署！现新上线智狐AI无人直播手机。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI短视频框架 -->
+          <div class="col-lg-12 mb-4">
+            <div class="ai-product-card p-3">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <div class="product-image">
+                    <img
+                      src="images/ai2.png"
+                      alt="AI短视频框架"
+                      class="img-fluid rounded"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-content">
+                    <div class="product-badge mb-2">
+                      <img src="images/ai-icon2.png" alt="" />
+
+                      <span>AI短视频框架</span>
+                    </div>
+                    <p class="product-desc">
+                      2024年3月5日，智狐AI短视频矩阵系统全新升级，这次用AI进行了重构。一人轻松管理上千个账号，一键生成上万条短视频，智能托管，自动发布！目前已经有上百家代理预定，这是智狐AI继无人直播系统之后又一力作。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 数字人克隆系统 -->
+          <div class="col-lg-12 mb-4">
+            <div class="ai-product-card p-3">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <div class="product-image">
+                    <img
+                      src="images/ai3.png"
+                      alt="数字人克隆系统"
+                      class="img-fluid rounded"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-content">
+                    <div class="product-badge mb-2">
+                      <img src="images/ai-icon3.png" alt="" />
+
+                      <span>数字人克隆系统</span>
+                    </div>
+                    <p class="product-desc">
+                      交付说明第一：开发环境软件采用PHP+MYSQL+uniapp开发。交付模式前后端全开源源码交付，支持二次开发，你也可以包装成属于你的软件对外销售。全网独家采用小程序开发，微信拥有14亿用户，覆盖更广泛。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI对话机器人 -->
+          <div class="col-lg-12 mb-4">
+            <div class="ai-product-card p-3">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <div class="product-image">
+                    <img
+                      src="images/ai4.png"
+                      alt="AI对话机器人"
+                      class="img-fluid rounded"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-content">
+                    <div class="product-badge mb-2">
+                      <img src="images/ai-icon4.png" alt="" />
+                      <span>AI对话机器人</span>
+                    </div>
+                    <p class="product-desc">
+                      小牛AI是一款国内强大的人工智能聊天软件，支持图片识别，支持最新版GPT4.0，支持AI绘画，支持联网模式。AI机器人可以完成虚拟的场景对话，可以陪你聊天、写代码、写文章、问知识、AI绘画等。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI数字人交互 -->
+          <div class="col-lg-12 mb-4">
+            <div class="ai-product-card p-3">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <div class="product-image">
+                    <img
+                      src="images/ai5.png"
+                      alt="AI数字人交互"
+                      class="img-fluid rounded"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-content">
+                    <div class="product-badge mb-2">
+                      <img src="images/ai-icon5.png" alt="" />
+                      <span>AI数字人交互</span>
+                    </div>
+                    <p class="product-desc">
+                      百付AI数字人交互解决方案，可以回答各种问题。数字人+智能交互，缔造智慧互动体验。一屏尽显，多端应用。不仅会聊天，还可以扮演各种角色，为你提供不同的咨询建议。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 训练AI模型 -->
+          <div class="col-lg-12 mb-4">
+            <div class="ai-product-card p-3">
+              <div class="row align-items-center">
+                <div class="col-md-3">
+                  <div class="product-image">
+                    <img
+                      src="images/ai6.png"
+                      alt="训练AI模型"
+                      class="img-fluid rounded"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-9">
+                  <div class="product-content">
+                    <div class="product-badge mb-2">
+                      <img src="images/ai-icon6.png" alt="" />
+                      <span>训练AI模型</span>
+                    </div>
+                    <p class="product-desc">
+                      百付千问 -
+                      快速训练自己专属的AI机器人。只需要上传文档或者资料，就可以轻松得到一个基于你自己数据的AI聊天机器人，它可以回答关于训练数据的任何问题。用于AI客服，AI助理，知识检索，AI克隆人等等。
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <h4 class="text-primary mb-4">泰安百付人工智能有限公司</h4>
+            <p class="mb-2">地址：肥城市工业三路陶都农贸城L1号沿街楼南首</p>
+            <p class="mb-2">电话：010-00000000</p>
+            <p class="mb-2">邮箱：support@modao.cc</p>
+          </div>
+
+          <div class="col-lg-2 mb-4 mb-lg-0">
+            <h5 class="text-white mb-3">关于我们</h5>
+            <ul class="footer-links">
+              <li><a href="#">业务介绍</a></li>
+              <li><a href="#">客户案例</a></li>
+              <li><a href="#">问答客服</a></li>
+              <li><a href="#">业务介绍</a></li>
+              <li><a href="#">问答客服</a></li>
+              <li><a href="#">公共关系</a></li>
+              <li><a href="#">其他相关</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 mb-4 mb-lg-0">
+            <h5 class="text-white mb-3">产品与服务</h5>
+            <ul class="footer-links">
+              <li><a href="#">训练AI模型</a></li>
+              <li><a href="#">AI应用开发</a></li>
+              <li><a href="#">AI Agent</a></li>
+              <li><a href="#">训练AI模型</a></li>
+              <li><a href="#">对接AI大模型</a></li>
+              <li><a href="#">AI Agent</a></li>
+              <li><a href="#">训练AI模型</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2">
+            <h5 class="text-white mb-3">联系我们</h5>
+            <div class="social-icons mb-4">
+              <a href="#" class="me-2"
+                ><img src="./images/lx-icon1.png" alt=""
+              /></a>
+              <a href="#" class="me-2"
+                ><img src="./images/lx-icon2.png" alt=""
+              /></a>
+              <a href="#"><img src="./images/lx-icon3.png" alt="" /></a>
+            </div>
+            <div class="qr-code">
+              <img
+                src="images/wx.png"
+                alt="微信二维码"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://baifuqianwen.com/js/iframe.js"
+      id="chatbot-iframe"
+      data-bot-src="https://baifuqianwen.com/chat/share?shareId=pryiqn30ln6pyu0a6mi39tr6"
+      data-default-open="false"
+      data-drag="true"
+      data-open-icon="data:image/svg+xml;base64,PHN2ZyB0PSIxNjkwNTMyNzg1NjY0IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQxMzIiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNTEyIDMyQzI0Ny4wNCAzMiAzMiAyMjQgMzIgNDY0QTQxMC4yNCA0MTAuMjQgMCAwIDAgMTcyLjQ4IDc2OEwxNjAgOTY1LjEyYTI1LjI4IDI1LjI4IDAgMCAwIDM5LjA0IDIyLjRsMTY4LTExMkE1MjguNjQgNTI4LjY0IDAgMCAwIDUxMiA4OTZjMjY0Ljk2IDAgNDgwLTE5MiA0ODAtNDMyUzc3Ni45NiAzMiA1MTIgMzJ6IG0yNDQuOCA0MTZsLTM2MS42IDMwMS43NmExMi40OCAxMi40OCAwIDAgMS0xOS44NC0xMi40OGw1OS4yLTIzMy45MmgtMTYwYTEyLjQ4IDEyLjQ4IDAgMCAxLTcuMzYtMjMuMzZsMzYxLjYtMzAxLjc2YTEyLjQ4IDEyLjQ4IDAgMCAxIDE5Ljg0IDEyLjQ4bC01OS4yIDIzMy45MmgxNjBhMTIuNDggMTIuNDggMCAwIDEgOCAyMi4wOHoiIGZpbGw9IiM0ZTgzZmQiIHAtaWQ9IjQxMzMiPjwvcGF0aD48L3N2Zz4="
+      data-close-icon="data:image/svg+xml;base64,PHN2ZyB0PSIxNjkwNTM1NDQxNTI2IiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjYzNjciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNTEyIDEwMjRBNTEyIDUxMiAwIDEgMSA1MTIgMGE1MTIgNTEyIDAgMCAxIDAgMTAyNHpNMzA1Ljk1NjU3MSAzNzAuMzk1NDI5TDQ0Ny40ODggNTEyIDMwNS45NTY1NzEgNjUzLjYwNDU3MWE0NS41NjggNDUuNTY4IDAgMSAwIDY0LjQzODg1OCA2NC40Mzg4NThMNTEyIDU3Ni41MTJsMTQxLjYwNDU3MSAxNDEuNTMxNDI5YTQ1LjU2OCA0NS41NjggMCAwIDAgNjQuNDM4ODU4LTY0LjQzODg1OEw1NzYuNTEyIDUxMmwxNDEuNTMxNDI5LTE0MS42MDQ1NzFhNDUuNTY4IDQ1LjU2OCAwIDEgMC02NC40Mzg4NTgtNjQuNDM4ODU4TDUxMiA0NDcuNDg4IDM3MC4zOTU0MjkgMzA1Ljk1NjU3MWE0NS41NjggNDUuNTY4IDAgMCAwLTY0LjQzODg1OCA2NC40Mzg4NTh6IiBmaWxsPSIjNGU4M2ZkIiBwLWlkPSI2MzY4Ij48L3BhdGg+PC9zdmc+"
+    />
+  </body>
+</html>

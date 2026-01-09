@@ -1,0 +1,1603 @@
+/* 全局样式 */
+:root {
+  --primary-color: #0062cc;
+  --secondary-color: #6c757d;
+  --dark-color: #343a40;
+  --light-color: #f5f5f5;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --blue-icon: #2563eb;
+  --light-bg: #f5f7fa;
+  --red-danger: #f87171;
+  --green-success: #4ade80;
+}
+
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+/* 自定义内边距类 */
+.py-5 {
+  padding-top: 72px !important;
+  padding-bottom: 72px !important;
+}
+
+/* 通用样式 */
+.bg-light {
+  background-color: var(--light-bg) !important;
+}
+
+.text-primary {
+  color: var(--blue-icon) !important;
+}
+
+/* 通用容器样式 */
+.image-container,
+.nfc-image-container,
+.takeout-image-container,
+.video-funnel-container,
+.media-platform-container,
+.video-analytics-container,
+.full-image-container,
+.digital-human-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image-container img,
+.nfc-image-container img,
+.takeout-image-container img,
+.video-funnel-container img,
+.media-platform-container img,
+.video-analytics-container img,
+.full-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* 通用列表样式 */
+.feature-list,
+.problem-list,
+.advantage-list,
+.training-list,
+.ecommerce-problem-list,
+.ecommerce-solution-list,
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
+}
+
+.feature-list li,
+.problem-list li,
+.advantage-list li,
+.training-list li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.problem-icon,
+.advantage-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.nfc-image-container {
+  position: relative;
+}
+.head-container {
+  position: absolute;
+  width: 400px;
+  top: -20px;
+  left: -30px;
+  transform: rotate(264.93deg) scaleX(-1);
+}
+.head-container img {
+  width: 100%;
+}
+.problem-icon i {
+  color: var(--red-danger);
+  font-size: 18px;
+}
+
+.advantage-icon i,
+.feature-list li i {
+  color: #5ec269;
+  font-size: 22px;
+  margin-top: 3px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* 通用图标容器 */
+.icon-container,
+.icon-blue,
+.model-icon,
+.solution-icon,
+.method-icon,
+.choose-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 通用卡片样式 */
+.card-hover,
+.feature-card,
+.card,
+.industry-card,
+.solution-card,
+.training-method-card,
+.training-module-card,
+.choose-us-card,
+.ai-product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-hover:hover,
+.feature-card:hover,
+.card:hover,
+.industry-card:hover,
+.solution-card:hover,
+.training-method-card:hover,
+.training-module-card:hover,
+.choose-us-card:hover,
+.ai-product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 导航栏 */
+.navbar {
+  padding: 0;
+  box-shadow: none;
+}
+
+.navbar-dark.bg-black {
+  background-color: #000 !important;
+}
+
+.border-nav {
+  border-top: none;
+  border-bottom: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navbar-brand img {
+  transition: transform 0.3s;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.05);
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 400;
+  color: #fff !important;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+}
+
+.nav-link::after {
+  display: none;
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* 轮播图/Banner */
+.carousel {
+  position: relative;
+}
+
+.carousel-background {
+  background-position: center;
+  background-size: cover;
+  height: 360px;
+  position: relative;
+}
+
+.carousel-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+}
+
+.carousel-container {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-content {
+  position: relative;
+  z-index: 2;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 154px;
+}
+@media (max-width: 992px) {
+  .carousel-content {
+    padding: 0 54px;
+  }
+}
+.carousel-content h1 {
+  font-size: 2.375rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-content p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-control-prev {
+  left: 25px;
+}
+
+.carousel-control-next {
+  right: 25px;
+}
+
+.carousel-indicators {
+  bottom: 20px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.carousel-indicators .active {
+  opacity: 1;
+  background-color: var(--primary-color);
+}
+
+/* 按钮样式 */
+.btn {
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 98, 204, 0.3);
+}
+
+.btn-outline-light:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.btn.banner-btn {
+  border-radius: 8px !important;
+  width: 160px;
+  height: 40px;
+  background: #1677ff;
+  box-sizing: border-box;
+  font-size: 16px;
+  border: none;
+  font-weight: normal;
+}
+
+/* 标题样式 */
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  position: relative;
+  display: inline-block;
+}
+
+h2.text-center {
+  display: block;
+}
+
+/* 核心业务能力卡片 */
+.feature-card {
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.card-body {
+  padding: 30px 20px;
+  background: url("../images/icon-bg-1.png") no-repeat right 9px center;
+  background-size: 120px auto;
+  /* background-color: rgba(255, 255, 255, 0.5);  */
+  /* background-blend-mode: overlay; */
+}
+.row .col:nth-child(2) .card-body {
+  background-image: url("../images/icon-bg-2.png");
+}
+.row .col:nth-child(3) .card-body {
+  background-image: url("../images/icon-bg-3.png");
+}
+.row .col:nth-child(4) .card-body {
+  background-image: url("../images/icon-bg-4.png");
+}
+.row .col:nth-child(5) .card-body {
+  background-image: url("../images/icon-bg-5.png");
+}
+.row .col:nth-child(6) .card-body {
+  background-image: url("../images/icon-bg-6.png");
+}
+.row .col:nth-child(7) .card-body {
+  background-image: url("../images/icon-bg-7.png");
+}
+.row .col:nth-child(8) .card-body {
+  background-image: url("../images/icon-bg-8.png");
+}
+.row .col:nth-child(9) .card-body {
+  background-image: url("../images/icon-bg-9.png");
+}
+.row .col:nth-child(10) .card-body {
+  background-image: url("../images/icon-bg-10.png");
+}
+.row .col:nth-child(11) .card-body {
+  background-image: url("../images/icon-bg-11.png");
+}
+.icon-blue {
+  width: 50px;
+  height: 50px;
+}
+
+.icon-blue img {
+  width: 100%;
+  height: auto;
+  max-height: 40px;
+  object-fit: contain;
+}
+
+.feature-card .card-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* 团购外卖图标样式 */
+.icon-takeout {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: var(--blue-icon);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icon-takeout.top-right {
+  top: -10px;
+  right: 30px;
+}
+
+.icon-takeout.bottom-left {
+  bottom: 20px;
+  left: -10px;
+}
+
+/* AI数字人短视频样式 */
+.digital-human-container img {
+  width: 215px;
+}
+
+/* AI智能客服样式 */
+.ai-customer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.customer-image,
+.service-image {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+/* 通用图标样式 */
+.model-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(37, 99, 235, 0.1);
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.solution-icon i,
+.model-icon i {
+  font-size: 28px;
+  color: var(--blue-icon);
+}
+
+/* 企业AI训练模型样式 */
+.ai-model-image {
+  width: 167px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.model-feature-card {
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.industry-card {
+  /* display: flex; */
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16);
+}
+
+.industry-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.industry-icon i {
+  font-size: 24px;
+  color: #3a86ff;
+}
+
+.industry-content {
+  flex: 1;
+}
+
+.industry-content h5 {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.industry-content p {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.industry-examples {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  gap: 16px;
+}
+
+.industry-examples span {
+  display: inline-block;
+  flex: 1;
+  background-color: #eee;
+  padding: 15px 10px;
+  margin-right: 0;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: normal;
+}
+
+/* AI智慧一体机 */
+.product-position {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.device-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #e6f0ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.device-icon i {
+  color: #3488ff;
+  font-size: 24px;
+}
+
+.device-content h5 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.device-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.feature-item {
+  background-color: #f9fafb;
+  padding: 5px 15px;
+  border-radius: 20px;
+  color: #374151;
+  font-size: 14px;
+  border-radius: 12px;
+  width: 150px;
+}
+
+.ai-device-images {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.ai-device-images .flex {
+  display: flex;
+  gap: 15px;
+}
+
+.ai-device-images img {
+  width: 48%;
+  border-radius: 10px;
+}
+
+.solution-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.solution-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+}
+
+.solution-icon i {
+  color: #3488ff;
+  font-size: 20px;
+}
+
+.solution-content {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.solution-content h5 {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.solution-features {
+  margin-top: 15px;
+}
+
+.feature-tag {
+  display: flex;
+  align-items: flex-start;
+}
+
+.feature-tag i {
+  color: #4ade80;
+  font-size: 22px;
+  margin-right: 10px;
+
+  line-height: 1;
+}
+
+.solution-image {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.solution-image img {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+/* 解决方案卡片样式 */
+.solution-card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 解决方案图标颜色变体 */
+
+.solution-content p {
+  margin-bottom: 0;
+  color: #4b5563;
+  font-size: 16px;
+}
+
+.solution-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.solution-image {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.solution-image img {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.solution-card:hover .solution-image img {
+  transform: scale(1.05);
+}
+
+/* AI赋能跨境电商样式 */
+.ecommerce-problem-list li,
+.ecommerce-solution-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.ecommerce-problem-list .problem-icon {
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.ecommerce-problem-list .problem-content,
+.ecommerce-solution-list .solution-content {
+  font-size: 16px;
+  color: #333;
+  flex: 1;
+}
+
+.solution-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.solution-badge img {
+  width: 24px;
+  height: 24px;
+}
+
+.solution-badge i {
+  font-size: 20px;
+  color: #3a86ff;
+}
+
+/* 获客指导与培训样式 */
+.training-method-card {
+  background-color: #fff;
+  padding: 25px 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.method-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.method-icon i {
+  font-size: 28px;
+  color: #3a86ff;
+}
+
+.training-method-card h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.training-method-card p {
+  color: #6c757d;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.training-module-card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.module-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.module-number {
+  font-weight: 600;
+  color: #3a86ff;
+  margin-right: 10px;
+}
+
+.module-header h5 {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.training-list li {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #333;
+}
+
+.training-list li i {
+  margin-right: 10px;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+/* 为什么选择我们样式 */
+.choose-us-card {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fff;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); */
+  height: 100%;
+}
+
+.choose-icon {
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.choose-icon i {
+  font-size: 40px;
+  color: #3a86ff;
+}
+
+.choose-us-card h4 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.choose-us-card p {
+  color: #000;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+/* 页脚样式 */
+footer {
+  background-color: #000;
+  color: #fff;
+}
+
+footer h4 {
+  color: #3488ff;
+  font-weight: 600;
+}
+
+footer h5 {
+  font-size: 18px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.qr-code img {
+  max-width: 130px;
+}
+
+/* 响应式调整 - 增强小尺寸设备适配 */
+@media (max-width: 576px) {
+  /* 全局间距调整 */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .py-5 {
+    padding-top: 45px !important;
+    padding-bottom: 45px !important;
+  }
+
+  /* 导航 */
+  .nav-link {
+    padding: 0.5rem;
+    font-size: 14px;
+  }
+
+  /* 轮播图调整 */
+  .carousel-background {
+    height: 350px;
+  }
+
+  .carousel-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .carousel-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .carousel-control-prev {
+    left: 10px;
+  }
+
+  .carousel-control-next {
+    right: 10px;
+  }
+
+  /* 按钮调整 */
+  .btn {
+    padding: 0.4rem 1.2rem;
+  }
+
+  .btn.rounded-pill {
+    padding: 0.5rem 1.5rem;
+  }
+
+  /* 标题调整 */
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  /* 列表项调整 */
+  .feature-list li,
+  .problem-list li,
+  .advantage-list li {
+    font-size: 0.9rem;
+  }
+
+  /* 图标调整 */
+  .icon-blue {
+    width: 40px;
+    height: 40px;
+  }
+
+  .solution-icon,
+  .model-icon,
+  .method-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .choose-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-takeout {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  /* 卡片内边距调整 */
+  .feature-card .card-body {
+    padding: 20px 15px;
+  }
+
+  .solution-card,
+  .training-module-card,
+  .ai-device-box {
+    padding: 15px;
+  }
+
+  /* 图片尺寸调整 */
+  .customer-image,
+  .service-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .digital-human-container img {
+    width: 180px;
+  }
+
+  /* 行业卡片调整 */
+  .industry-card {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .industry-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .industry-examples span {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  /* 电商卡片调整 */
+  .ecommerce-problem-list li,
+  .ecommerce-solution-list li {
+    padding: 10px;
+  }
+
+  .ecommerce-problem-list .problem-content,
+  .ecommerce-solution-list .solution-content {
+    font-size: 14px;
+  }
+
+  .solution-badge {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-background {
+    height: 450px;
+  }
+
+  .carousel-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .carousel-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-section {
+    height: 400px !important;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .feature-list li {
+    font-size: 1rem;
+  }
+
+  .nfc-image-container {
+    margin-top: 2rem;
+  }
+  /* 多列布局调整 */
+  .row-cols-md-2 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  /* 间距调整 */
+  .mb-4 {
+    margin-bottom: 1.5rem !important;
+  }
+
+  .mb-5 {
+    margin-bottom: 2rem !important;
+  }
+
+  /* 内容顺序调整 */
+  .row {
+    flex-direction: column-reverse;
+  }
+
+  .row.row-cols-1 {
+    flex-direction: column;
+  }
+
+  .industry-examples span {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .ai-device-box {
+    flex-direction: column;
+  }
+
+  .ai-device-images .flex {
+    flex-direction: column;
+  }
+
+  .ai-device-images img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .solution-content {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .solution-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .media-platform-container,
+  .video-analytics-container,
+  .digital-human-container,
+  .ai-customer-container,
+  .ai-model-image,
+  .ai-device-box,
+  .solution-card,
+  .training-method-card,
+  .training-module-card,
+  .choose-us-card {
+    margin-bottom: 30px;
+  }
+
+  .customer-image,
+  .service-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .industry-card {
+    margin-bottom: 15px;
+  }
+
+  .ecommerce-pain-points,
+  .ecommerce-solutions {
+    margin-bottom: 30px;
+  }
+
+  .ecommerce-problem-list li,
+  .ecommerce-solution-list li {
+    margin-bottom: 15px;
+  }
+
+  footer .col-lg-3 {
+    margin-bottom: 30px;
+  }
+
+  /* 解决顺序问题的例外 */
+  .row.align-items-center {
+    flex-direction: column;
+  }
+}
+
+.carousel-control-next-icon {
+  background-image: url("../images/arrow-right.png") !important;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("../images/arrow-left.png") !important;
+  background-size: cover;
+  background-position: center;
+}
+.section-subtitle {
+  font-size: 20px;
+  color: #2563eb;
+  font-weight: normal;
+}
+.section-title2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.section-title3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+.section-title4 {
+  font-size: 16px;
+  color: #4b5563;
+}
+.section-title5 {
+  font-size: 20px;
+}
+.problem-list {
+  /* color: #ef4444; */
+}
+
+.section-title3-bold {
+  font-size: 18px;
+
+  font-weight: bold;
+}
+.relative {
+  position: relative;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ai-device-images img {
+  height: 188px;
+  width: auto;
+}
+.ai-device-images img:nth-of-type(1) {
+  margin-right: 11px;
+}
+.footer {
+  background: #000;
+}
+
+/* AI智能客服部分样式 */
+.ai-customer-service-section {
+  background-color: #f5f5f5;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  position: relative;
+}
+
+.customer-image-container {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+}
+
+.service-image-container {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  z-index: 10;
+}
+
+.center-title-area {
+  position: relative;
+  z-index: 5;
+  margin-bottom: 80px;
+}
+
+.content-comparison-area {
+  position: relative;
+  margin-top: -30px;
+  z-index: 1;
+}
+
+.problem-card,
+.solution-card {
+  background-color: #f8fafc;
+  border-radius: 15px;
+  padding: 25px;
+  height: 100%;
+}
+.problem-card2 {
+  background-color: #f0f6fe;
+}
+.ai-device-box {
+  background-color: #fff;
+}
+.problem-list,
+.advantage-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.problem-list li,
+.advantage-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.problem-icon,
+.advantage-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.problem-icon i {
+  color: #f87171;
+  font-size: 18px;
+}
+
+.advantage-icon i {
+  color: #4ade80;
+  font-size: 18px;
+}
+
+/* 响应式调整 */
+@media (max-width: 992px) {
+  .customer-image-container,
+  .service-image-container {
+    width: 150px;
+    height: 150px;
+  }
+
+  .customer-image-container {
+    left: 5%;
+  }
+
+  .service-image-container {
+    right: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-customer-service-section {
+    padding-top: 150px;
+  }
+
+  .customer-image-container {
+    left: 0;
+    top: -70px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .service-image-container {
+    right: 0;
+    top: -70px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .center-title-area {
+    margin-bottom: 40px;
+  }
+}
+
+/* AI企业赋能页面样式 */
+.ai-enterprise-banner {
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 80px 0;
+}
+
+.ai-enterprise-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.ai-enterprise-banner .container {
+  position: relative;
+  z-index: 2;
+}
+
+.search-box {
+  background-color: #fff;
+  border-radius: 0;
+  padding: 15px 50px;
+  box-shadow: none;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.search-input {
+  position: relative;
+  width: 576px;
+}
+
+.search-input .form-control {
+  padding-right: 35px;
+  padding-left: 15px;
+  font-size: 14px;
+  height: 38px;
+  background-color: #f5f5f5;
+  border: none;
+}
+
+.search-input .search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+}
+
+.btn-search {
+  font-size: 14px;
+  padding: 8px 15px;
+  border-radius: 30px;
+  border: none;
+  transition: all 0.3s ease;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.btn-primary.btn-search {
+  background-color: #1677ff;
+  border-color: #1677ff;
+  color: white;
+}
+
+.btn-outline-secondary.btn-search {
+  background-color: #fff;
+  color: #666;
+  border: none;
+}
+
+.btn-search:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.ai-product-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.ai-product-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  overflow: hidden;
+  border-radius: 6px;
+  height: 180px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.ai-product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-content {
+  padding: 0 8px;
+}
+
+.product-badge {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: #1677ff;
+  font-size: 18px;
+}
+
+.product-badge img {
+  margin-right: 8px;
+  width: 24px;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .search-box {
+    padding: 12px 0;
+    overflow-x: auto;
+  }
+
+  .btn-search {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .search-input {
+    width: 180px;
+  }
+
+  .ai-product-card {
+    margin-bottom: 20px;
+  }
+
+  .product-image {
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-image {
+    height: 160px;
+    margin-bottom: 15px;
+  }
+
+  .product-content {
+    padding: 0;
+  }
+
+  .search-input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-box {
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  .btn-search {
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .product-image {
+    height: 140px;
+  }
+}
+.border {
+  width: 100%;
+  height: 1px;
+  background: #e5e7eb;
+  margin-bottom: 20px;
+  transform: scaleY(0.5);
+}
+.f-c-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.pl-70 {
+  padding-left: 70px;
+}
+.text-success {
+  color: #22c55e !important;
+}
+.red-color {
+  color: #ef4444;
+}
+.blue-color {
+  background: #f6f8fe !important;
+}
+.shadow-sm {
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.16) !important;
+}
+@media (min-width: 992px) {
+  .offcanvas {
+    display: none;
+  }
+}
